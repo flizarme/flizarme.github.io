@@ -1,0 +1,34 @@
+[
+	{
+		"user": "cwong",
+		"mail": "cwong@intelligentsense.com",
+		"name": "Carlos",
+		"lastname": "Wong",
+		"image": "http://www.intelligentsense.com/sites/default/files/styles/thumbnail/public/Carlos%20Wong_0.jpg",
+		"password": "123456"
+	},
+	{
+		"user": "jbarboza",
+		"mail": "jbarboza@intelligentsense.com",
+		"name": "Julio",
+		"lastname": "Barboza",
+		"image": "http://www.intelligentsense.com/sites/default/files/styles/thumbnail/public/Julio2.jpg",
+		"password": "qwerty"
+	},
+	{
+		"user": "fsegovia",
+		"mail": "fsegovia@intelligentsense.com",
+		"name": "Fernando",
+		"lastname": "Segovia",
+		"image": "http://www.intelligentsense.com/sites/default/files/styles/thumbnail/public/fernando_segovia.jpg",
+		"password": "1q2w3e4r"
+	},
+	{
+		"user": "rquesada",
+		"mail": "rquesada@intelligentsense.com",
+		"name": "Ricardo",
+		"lastname": "Quesada",
+		"image": "http://www.intelligentsense.com/sites/default/files/styles/thumbnail/public/ricardo_quesada.jpg",
+		"password": "1qazxsw2"
+	}
+]
