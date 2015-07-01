@@ -1,4 +1,80 @@
+html, body
+{
+    height: 100%;
+}
+
 #AmaizingExplorerHeader
 {
-	background-color: red;
+	background-color: #bcd483;
+	width: 100%;
+	height: 13%;
+}
+
+#AmazingExplorerTitle
+{
+
+    position: absolute;
+    top: 22px;
+    left: 100px;
+	font-family: 'Viga', sans-serif;
+	font-weight: 900;
+	font-size: 420%;
+}
+
+#DogFootprintImage
+{
+	position: absolute;
+	bottom: 22px;
+	width: 100px;
+	height: 90px;
+}
+
+#AmazingTitle
+{
+	color: white;
+}
+
+#ExplorerTitle
+{
+	color: #102029;
+}
+
+#UnderTitleCol1
+{
+	background-color: #102029;
+	float: right;
+	height: 20px;
+	width: 20%;	
+}
+
+#UnderTitleCol2
+{
+	background-color: #95ab63;	
+	float: right;
+	height: 20px;
+	width: 20%;	
+}
+
+#UnderTitleCol3
+{
+	background-color: #bcd483;	
+	float: right;
+	height: 20px;
+	width: 20%;	
+}
+
+#UnderTitleCol4
+{
+	background-color: #e3f0d8;	
+	float: right;
+	height: 20px;
+	width: 20%;	
+}
+
+#UnderTitleCol5
+{
+	background-color: #f6ffe0;
+	float: right;	
+	height: 20px;
+	width: 20%;	
 }
