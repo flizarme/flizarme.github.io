@@ -42,16 +42,13 @@ html, body
 	color: #102029;
 }
 
-#amazing-title, #explorer-title
+.header-stripe
 {
-	
-}
-
-#header-stripe-1, #header-stripe-2, #header-stripe-3, #header-stripe-4, #header-stripe-5
-{
+	position: relative;
 	float: left;
 	height: 20px;
 	width: 20%;	
+	top: 102px;
 }
 
 #header-stripe-1
