@@ -2,15 +2,24 @@ html, body
 {
     height: 100%;
     width: 100%;
+   	margin: 0;
+   	background-color: #0d2836;
 }
 
 #amazing-header
 {
 	background-color: #bcd483;
-    position: relative;
+    position: fixed;
     height: 102px;
 	width: 100%;
 	font-family: 'Viga', sans-serif;
+}
+
+#amazing-header h1
+{
+	position: relative;
+	left: 110px;
+	top: 8px;
 	font-weight: 900;
 	font-size: 450%;
 }
@@ -35,9 +44,7 @@ html, body
 
 #amazing-title, #explorer-title
 {
-	position: relative;
-	top: 15px;
-	left: 120px;
+	
 }
 
 #header-stripe-1, #header-stripe-2, #header-stripe-3, #header-stripe-4, #header-stripe-5
@@ -46,7 +53,6 @@ html, body
 	height: 20px;
 	width: 20%;	
 }
-
 
 #header-stripe-1
 {
@@ -72,3 +78,4 @@ html, body
 {
 	background-color: #f6ffe0;
 }
+
