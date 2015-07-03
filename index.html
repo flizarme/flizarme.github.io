@@ -1,6 +1,6 @@
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="AmazingExplorerModule">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,40 +11,101 @@
 
     <title>Amazing Explorer</title>
 
+    <link rel="stylesheet" type="text/css" href="">
+
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    
     <!-- Bootstrap theme -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
 
     <!-- Custom styles for this test -->
-    <link rel="stylesheet" type="text/css" href="css/AEMainPageTheme.css">
+    <link rel="stylesheet" type="text/css" href="css/amazing-theme.css">
 
     <!-- Font family -->
     <link href='http://fonts.googleapis.com/css?family=Viga' rel='stylesheet' type='text/css'>
 
+    
+
   </head>
 
-  <body>
+  <body ng-controller="MainController">
     <header id="amazing-header">
 
       <div class="container">
         <img id="dog-footprint" class="img-responsive" src="img/dogFootprint.png" alt="Dog Footprint">
-        <h1><span id="amazing-title">AMAZING</span><span id="explorer-title">EXPLORER</span></h1>
+        <div id="amazing-header-title"><span id="amazing-title">AMAZING</span><span id="explorer-title">EXPLORER</span></div>
       </div>  
      
-    </header>
-    
-    <div class="header-stripe" id="header-stripe-1"></div>
-    <div class="header-stripe" id="header-stripe-2"></div>
-    <div class="header-stripe" id="header-stripe-3"></div>
-    <div class="header-stripe" id="header-stripe-4"></div>
-    <div class="header-stripe" id="header-stripe-5"></div>
+      <div class="header-stripe" id="header-stripe-1"></div>
+      <div class="header-stripe" id="header-stripe-2"></div>
+      <div class="header-stripe" id="header-stripe-3"></div>
+      <div class="header-stripe" id="header-stripe-4"></div>
+      <div class="header-stripe" id="header-stripe-5"></div>
+
+    </header> 
+
 
     <div id="main-content" class="container">
-      
+
+
+      <div class="amazing-table">
+        <table class="table table-striped ">
+          <thead>
+            <tr>
+              <th>Usuario</th>
+              <th>Correo</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr ng-repeat="user in users" ng-click='getUserInfo(user)'>
+              <td>{{ user.user }}</td>
+              <td>{{ user.mail }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="amazing-panel">
+        <header class="amazing-panel-header">
+          <span class="panel-header-title"> Editar Usuario </span>
+        </header>
+
+        <div class="row amazing-panel-body container">
+          <div class="col-xs-4 col-md-4 form-group">
+            <input input="text" class="form-control" id="username" placeholder="Usuario" ng-model="editableUser.user">
+            <input input="text" class="form-control" id="name" placeholder="Nombre" ng-model="editableUser.name">
+            <input input="email" class="form-control" id="email" placeholder="Correo" ng-model="editableUser.mail">
+          </div>
+          <div class="col-xs-4 col-md-4 form-group">
+            <input input="text" class="form-control" id="lastname" placeholder="Apellidos" ng-model="editableUser.lastname">
+            <input type='password' class="form-control" id="password" placeholder="Password" ng-model="editableUser.password">
+          </div>
+          <div class="col-xs-4 col-md-4 img-center ">
+            <img id='amazing-user-img'class="img-responsive img-amazing-panel-center" src="img/amazingExplorerImage.png">
+            <button type="button" class="btn btn-primary center-block">Cambiar Imagen</button>
+          </div>
+          <div class="">
+            <button type="button" class="btn btn-primary amazing-button">Cancelar</button>
+            <button type="button" class="btn btn-primary amazing-button" ng-click='updateUserInfo()'>Guardar</button>
+          </div>
+        </div>
+          
+      </div>
+
+     
+
     </div>
 
+
  
-    
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.18/require.min.js" ></script> 
+  <script type="text/javascript" src="js/table-selector.js" ></script>
+  <script type="text/javascript" src="js/controller.js" ></script>
+
+
+  <!--script type="text/javascript" src="sample_files/sample.json"></script-->
   </body>
 </html>
