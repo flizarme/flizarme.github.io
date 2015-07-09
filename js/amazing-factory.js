@@ -15,11 +15,11 @@ app.factory('usersDataFactory', ['$http', function ($http) {
         
         asyncDataRetrieval: function () {
             if (!userPromise) {
-                userPromise = $http.get('../sample_files/sample.json'); /*.
+                userPromise = $http.get('../sample_files/sample.json').
                 then(function (response) {
                     console.log(response);
                     return response.data;
-                }); */
+                }); 
             }
             return userPromise;
         }
