@@ -58,7 +58,7 @@
             </tr>
           </thead>
           <tbody>
-            <tr ng-repeat="user in users" ng-click='getUserInfo(user)'>
+            <tr ng-repeat="user in users" ng-click='getUserInfo(user)' ng-class="{highlight: (user.mail == selectedUser)}">
               <td>{{ user.user }}</td>
               <td>{{ user.mail }}</td>
             </tr>
@@ -82,11 +82,13 @@
             <input type='password' class="form-control" id="password" placeholder="Password" ng-model="editableUser.password">
           </div>
           <div class="col-xs-4 col-md-4 img-center ">
-            <img id='amazing-user-img'class="img-responsive img-amazing-panel-center" src="img/amazingExplorerImage.png">
+            <img id='amazing-user-img' class="img-responsive img-amazing-panel-center" ng-src="{{editableUser.image}}">
+            <input type="file" ng-file-select="onFileSelect($files)">
             <button type="button" class="btn btn-primary center-block">Cambiar Imagen</button>
           </div>
           <div class="">
-            <button type="button" class="btn btn-primary amazing-button">Cancelar</button>
+            <button type="button" class="btn btn-primary amazing-button" ng-click='cancelEditUser()'>Cancelar</button>
+
             <button type="button" class="btn btn-primary amazing-button" ng-click='updateUserInfo()'>Guardar</button>
           </div>
         </div>
@@ -98,14 +100,11 @@
     </div>
 
 
- 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="node_modules/angular-file-upload/dist/angular-file-upload-shim.min.js"></script>
   <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.18/require.min.js" ></script> 
-  <script type="text/javascript" src="js/table-selector.js" ></script>
-  <script type="text/javascript" src="js/controller.js" ></script>
+  <script src="node_modules/angular-file-upload/dist/angular-file-upload.min.js"></script>
+  <script type="text/javascript" src="js/amazing-controller.js" ></script>
+  <script type="text/javascript" src="js/amazing-factory.js" ></script>
 
-
-  <!--script type="text/javascript" src="sample_files/sample.json"></script-->
   </body>
 </html>
